@@ -25,7 +25,7 @@ if (route.params.vote_id) {
     const thisVoting = data.find((item: { voteId: string }) => item.voteId === route.params.vote_id)
     if (thisVoting) {
       window.location.replace(
-        `https://agency.vote.nau-digital.com/votings/${route.params.vote_id}#${thisVoting.privateKey}`
+        `${import.meta.env.VITE_AGENCY_APP}/votings/${route.params.vote_id}#${thisVoting.privateKey}`
       )
     } else {
       state.value = 'error'

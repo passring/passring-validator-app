@@ -65,13 +65,6 @@ async function handleCredentialResponse(response: {
   const privkey = PrivateKey.random()
   const publicKey = privkey.getPublicKey().encodeHex()
   const privateKey = privkey.encodeHex()
-  // let ring = get_random_ring(15)
-  // ring.push(privkey.getPublicKey())
-  // console.log('Using ring: ', ring)
-  // let passring = new Passring('test_voting id', ring)
-  // let issued = passring.issue(2, privkey) // issue vote for choice 2 with privkey| console. log("Issued: ", issued);
-  // let result = passring.validate(issued)
-  // console.log('Validated: ', result)
 
   try {
     const resp = await fetch(
