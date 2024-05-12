@@ -14,5 +14,8 @@ export default defineConfig({
   },
   build: {
     target: 'esnext'
+  },
+  preview: {
+    host: '0.0.0.0'
   }
 })
